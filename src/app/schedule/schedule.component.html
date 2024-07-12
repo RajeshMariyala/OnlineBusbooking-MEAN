@@ -1,0 +1,76 @@
+<div class="topcard"><img src="https://www.colorhexa.com/300465.png" alt="" height="70px" width="1550px" style="margin-left: -30px;margin-top:-80px;"></div>
+ 
+<div class="card">
+  <h3 class="title" style="text-align: center;color: rgb(4, 4, 118); font-family: sans-serif; font-weight: 500;">Bus Availability List</h3>
+  <button class="custom-button" (click)="toggleForm()">+ Add Data</button>
+  <button class="custom-button" (click)="updateDataButton_click()">Update Data</button>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Bus ID</th>
+        <th>Date</th>
+        <th>Bus Name</th>
+        <th>Bus Location</th>
+        <th>Availability</th>
+        <th>Price</th>
+        <th>Delete</th>
+        <th>Select</th>
+      </tr>
+    </thead>
+    <tbody id="scheduleTableBody">
+    
+      <tr *ngFor="let bus of bookArray">
+        <td>{{ bus.Busid }}</td>
+        <td>{{ bus.Date }}</td>
+        <td>{{ bus.Bus }}</td>
+        <td>{{ bus.Location }}</td>
+        <td>{{ bus.Availability }}</td>
+        <td>{{ bus.Price }}</td>
+        <td>
+          <button class="delete-button" (click)="deleteData(bus.Busid)">Delete</button>
+        </td>
+        <td>
+          <button class="select-button" (click)="selectRow(bus)">Select</button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+  <br>
+  <div id="formContainer" *ngIf="showForm">
+    <form [formGroup]="scheduleForm" (submit)="addData()">
+      <input class="input-field" type="number" placeholder="Bus ID" formControlName="Busid" /><br><br>
+      <input class="input-field" type="date" placeholder="Date" formControlName="Date" /><br><br>
+      <input class="input-field" type="text" placeholder="Bus Name" formControlName="Bus" /><br><br>
+      <input class="input-field" type="text" placeholder="Location" formControlName="Location" /><br><br>
+      <input class="input-field" type="number" placeholder="Availability" formControlName="Availability" /><br><br>
+      <input class="input-field" type="number" placeholder="Price" formControlName="Price" /><br><br>
+      <button type="submit" class="custom-button2">Submit</button>
+    </form>
+  </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<header class="admin-navigation-header">
+    <nav>
+        <div class="logo-container">
+            <h2 class="logotext" style="margin-left: 20px; font-size: 30px;box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        ">BookBus &nbsp;<i class="fas fa-bus-alt"></i></h2>
+        </div>
+        <div class="navigation-items" id="navigation-items">
+            <a routerLink="/dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a routerLink="/buslist"><i class="fas fa-bus-alt"></i> Buslist</a>
+            <a routerLink="/busschedule"><i class="fas fa-route"></i> Busschedule</a>
+            <a routerLink="/userlist"><i class="fas fa-users"></i> Userlist</a>
+            <a routerLink="/schedule"><i class="fas fa-calendar-alt"></i> Schedule</a>
+            <br><br><br>
+            <a routerLink="/login"><i class="fas fa-sign-in-alt"></i> Log Out</a>
+        </div>
+        <div class="hamburger">
+            <span id="openHam">&#9776;</span>
+            <span id="closeHam">&#x2716;</span>
+        </div>
+    </nav>
+</header>
+

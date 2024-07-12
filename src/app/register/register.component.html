@@ -1,0 +1,54 @@
+<div class="card">
+  <div class="container">
+    <div class="form-container">
+      <p class="signup" style="margin-left: -160px;">Register</p>
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <label style="font-family: sans-serif;">User Id:</label>
+        <input type="text" formControlName="username" [required]="true" />
+        <br />
+
+        <div *ngIf="signupForm.get('username')?.invalid && signupForm.get('username')?.touched">
+          <small *ngIf="signupForm.get('username')?.errors?.['required']">User ID is required</small>
+          <small *ngIf="signupForm.get('username')?.errors?.['pattern']">Invalid username format</small>
+        </div>
+
+        <label style="font-family: sans-serif;">Email:</label>
+        <input type="text" formControlName="email" [required]="true" />
+
+
+        <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+          <small *ngIf="signupForm.get('email')?.errors?.['required']">Email is required</small>
+          <small *ngIf="signupForm.get('email')?.errors?.['email']">Invalid email format</small>
+        </div>
+
+        <label style="font-family: sans-serif;">Password:</label>
+        <input type="password" formControlName="password" [required]="true" />
+
+
+        <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched">
+          <small *ngIf="signupForm.get('password')?.errors?.['required']">Password is required</small>
+          <small *ngIf="signupForm.get('password')?.errors?.['minlength']">Password must be at least 8 characters
+            long</small>
+        </div>
+
+        <label style="font-family: sans-serif;">Confirm Password:</label>
+        <input type="password" formControlName="confirmPassword" [required]="true" />
+
+
+        <div *ngIf="signupForm.get('confirmPassword')?.invalid && signupForm.get('confirmPassword')?.touched">
+          <small *ngIf="signupForm.get('confirmPassword')?.errors?.['required']">Confirm Password is
+            required</small>
+
+
+        </div>
+
+        <button type="submit">Signup</button>
+      </form>
+      <p class="bottom-text">Already have an account? <a href="login">Login</a></p>
+    </div>
+    <div class="image-container">
+
+      <img src="https://offercdn.paytm.com/blog/2023/06/apsrtc-app.jpg" alt="Image" />
+    </div>
+  </div>
+</div>

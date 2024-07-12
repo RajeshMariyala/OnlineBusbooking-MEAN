@@ -1,0 +1,181 @@
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Apply box shadow */
+   margin-right: 3px;
+}
+.add-bus-btn {
+    background-color: #28a745; /* Green background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Apply border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 16px; /* Adjust font size */
+    margin-bottom: 10px; /* Add some bottom margin */
+    /* Add any other styles as needed */
+}
+
+.add-bus-btn {
+    margin-bottom: 20px;
+    
+}
+
+.table {
+    width: 100%;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.table th {
+    background-color: #1f0780;
+    color: #fff;
+}
+
+.table tbody tr:hover {
+    background-color: #e1e4e7;
+}
+
+.form {
+    width: 400px;
+    margin-left: 350px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Apply box shadow */
+}
+
+.form input[type="text"],
+.form input[type="number"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.form input[type="button"],
+.form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form input[type="button"].btn-primary {
+    background-color:#1f0780;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.form button.btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.form button.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* amin nav */
+
+
+.admin-navigation-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Set the width according to your design */
+    height: 100%;
+    background-color: #280465; /* Change the background color as needed */
+    color: #fff; /* Change the text color as needed */
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  .logo-text{
+    font-family: sans-serif;
+    
+  }
+  .logotext >i{
+    background-color: rgb(255, 255, 255);
+    padding: 3px 5px 3px 5px;
+    border-radius: 3px;
+    margin-left: 3px;
+    color: #1f0780;
+  }
+  .navigation-items{
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-left: 20px;
+  
+    
+   
+  }
+  .admin-navigation-header .navigation-items a {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    
+    
+  }
+  .admin-navigation-header .navigation-items a:hover {
+    background-color: white;
+    color: #1f0780;
+    border-radius: 6px;
+    padding-left: 15px;
+    padding-top: 5px;
+  }
+  .admin-navigation-header nav {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin-navigation-header .logo-container {
+    margin-bottom: 20px;
+  }
+  
+  .admin-navigation-header .navigation-items a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .admin-navigation-header .hamburger {
+    display: none; /* Hide the hamburger menu for now */
+  }
+  
+  /* Media query for small screens to toggle navigation */
+  @media screen and (max-width: 768px) {
+    .admin-navigation-header {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+  
+    .admin-navigation-header .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+  
+    .admin-navigation-header .navigation-items {
+        display: none;
+    }
+  
+    .admin-navigation-header .navigation-items.active {
+        display: block;
+    }
+  }
+
+ 

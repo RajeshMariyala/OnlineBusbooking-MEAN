@@ -1,0 +1,88 @@
+<div class="bus-seat-selection">
+  <h2 style="font-family: sans-serif;">Select Your Seats</h2>
+
+  <div class="seat-container">
+
+    <span></span>
+    <span></span>
+
+    <img src="assets/steering.png" class="seat-handle" alt="Handle" />
+
+
+
+    <img *ngFor="let seat of seats; let i = index" class="seat"
+      [src]="isBooked(seat) ? 'assets/seat2.png' : (isSelected(seat) ? 'assets/seat3.png' : 'assets/seat1.png')"
+      (click)="toggleSeatSelection(seat)"
+      [style.visibility]="(isEmpty(seat) && showEmptySeats) || (isSelected(seat) && showBookedSeats) ? 'visible' : 'hidden'"
+      alt="Seat {{ seat }}" />
+  </div>
+
+  <div class="summary">
+    <p>Number of Seats: {{ selectedSeats.length }}</p>
+    <p>Total Price: ₹{{ calculateTotalPrice() | number:'1.2-2' }}</p>
+  </div><br>
+  <div id="PayPalButtons"></div>
+</div>
+
+<footer class="footer-card">
+  <div class="footer-card-content">
+    <div class="footer-columns">
+      <div class="column">
+        <span class="L1">BookBus</span>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/login">Services</a></li>
+            <li><a href="/contactus">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="column">
+        <h4 style="font-family: sans-serif;">Useful Links</h4>
+        <ul>
+          <li><a href="/terms">Terms&Service</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/privacy">Cancel Policy</a></li>
+          <li><a href="/privacy">Cancel Policy</a></li>
+          <li><a href="/faqs">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4 style="font-family: sans-serif;">Additional Links</h4>
+        <ul>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/support">Support</a></li>
+          <li><a href="/support">Bus Routes</a></li>
+          <li><a href="/support">Refer Friends</a></li>
+          <li><a href="/support">Choose Us</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>Follow Us</h4>
+        <ul class="social-icons">
+          <li>
+            <a href="#"><img src="https://freelogopng.com/images/all_img/1658030214facebook-logo-hd.png"
+                alt="Facebook" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="https://freelogopng.com/images/all_img/1658586823instagram-logo-transparent.png"
+                alt="Twitter" /></a>
+          </li>
+          <li>
+            <a href="#"><img
+                src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-mobile-software-icon-png-image_6315991.png"
+                alt="Facebook" /></a>
+          </li>
+          <li>
+            <a href="#"><img
+                src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png"
+                alt="Twitter" /></a>
+          </li>
+        </ul>
+        <img src="https://meshpayments.com/wp-content/uploads/2022/06/Banner-2.png" alt="Facebook" width="280px"
+          height="120px" style="margin-left: 100px" />
+      </div>
+    </div>
+  </div>
+</footer>

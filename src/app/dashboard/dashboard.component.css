@@ -1,0 +1,280 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #0b233f;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.card {
+  width: calc(60% - 20px);
+  height: 220px;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #f2f1f48d;
+  padding: 0px;
+  margin: 0 20px 30px;
+}
+
+.card img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.card .name {
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding: 30px;
+  text-align: center;
+  color: #333;
+}
+
+
+
+
+.header-title {
+  margin-right: auto;
+  margin-left: 20px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+}
+
+.header-admin {
+  margin-right: auto;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.profile img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown .arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.menu {
+  background-color: #0b233f;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 7%;
+  overflow-y: auto;
+  padding-top: 50px;
+}
+
+.menu-item {
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  border-bottom: 10px solid transparent;
+  transition: border-color 0.3s;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+.menu-item:hover {
+  border-color: #030304;
+}
+
+  .content {
+    margin-left: 300px;
+    padding: 20px;
+  }
+
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+
+
+
+  .card .name a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f0780;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    text-decoration: none;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+
+  .menu-item:hover .submenu {
+    display: block;
+  }
+
+  .submenu {
+    display: none;
+    position: absolute;
+    background-color: #cbc4c4;
+    border: 1px solid #0b0707;
+    padding: 5px;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    color: black;
+  }
+
+
+
+
+  .admin-navigation-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #280465;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo-text {
+    font-family: sans-serif;
+
+  }
+
+  .logotext>i {
+    background-color: rgb(255, 255, 255);
+    padding: 3px 5px 3px 5px;
+    border-radius: 3px;
+    margin-left: 3px;
+    color: #1f0780;
+  }
+
+  .navigation-items {
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-left: 20px;
+
+
+
+  }
+
+  .admin-navigation-header .navigation-items a {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+
+  }
+
+  .admin-navigation-header .navigation-items a:hover {
+    background-color: white;
+    color: #1f0780;
+    border-radius: 6px;
+    padding-left: 15px;
+    padding-top: 5px;
+  }
+
+  .admin-navigation-header nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .admin-navigation-header .logo-container {
+    margin-bottom: 20px;
+  }
+
+  .admin-navigation-header .navigation-items a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .admin-navigation-header .hamburger {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .admin-navigation-header {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+    }
+
+    .admin-navigation-header .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+
+    .admin-navigation-header .navigation-items {
+      display: none;
+    }
+
+    .admin-navigation-header .navigation-items.active {
+      display: block;
+    }
+  }
+
+  .topcard {
+    width: 1250px;
+    height: 50px;
+    padding: 20px;
+    background-color: #280465;
+    margin-top: -83px;
+    margin-left: -78px;
+  }

@@ -1,0 +1,166 @@
+.card {
+  max-width: 1150px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  background-color: #ffffff;
+margin-right: 30px;
+box-shadow: 4px 4px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  margin-top: 10px;
+}
+th{
+  background-color: #1f0780;
+  color: white;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.custom-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  background-color:#1f0780;
+  margin: 8px;
+  
+}
+.custom-button2 {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  background-color:#1f0780;
+  margin: 8px;
+  margin-left: 250px;
+}
+.delete-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #dc3545; 
+}
+
+.select-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #28a745; 
+}
+
+.input-field {
+  width: 50%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 250px;
+}
+
+.input-field[type="date"] {
+  padding: 6px; 
+}
+
+
+
+.admin-navigation-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px; 
+  height: 100%;
+  background-color: #280465; 
+  color: #fff; 
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.logo-text{
+  font-family: sans-serif;
+  
+}
+.logotext >i{
+  background-color: rgb(255, 255, 255);
+  padding: 3px 5px 3px 5px;
+  border-radius: 3px;
+  margin-left: 3px;
+  color: #1f0780;
+}
+.navigation-items{
+  font-family: sans-serif;
+  font-size: 20px;
+  margin-left: 20px;
+
+  
+ 
+}
+.admin-navigation-header .navigation-items a {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  
+  
+}
+.admin-navigation-header .navigation-items a:hover {
+  background-color: white;
+  color: #1f0780;
+  border-radius: 6px;
+  padding-left: 15px;
+  padding-top: 5px;
+}
+.admin-navigation-header nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-navigation-header .logo-container {
+  margin-bottom: 20px;
+}
+
+.admin-navigation-header .navigation-items a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.admin-navigation-header .hamburger {
+  display: none; 
+}
+
+@media screen and (max-width: 768px) {
+  .admin-navigation-header {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+  }
+
+  .admin-navigation-header .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+
+  .admin-navigation-header .navigation-items {
+      display: none;
+  }
+
+  .admin-navigation-header .navigation-items.active {
+      display: block;
+  }
+}

@@ -1,0 +1,102 @@
+<!-- login.component.html -->
+
+<div class="card">
+    <div class="container">
+        <div class="form-container">
+            <p class="signup">Login</p>
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <label style="margin-left: 25px;font-family: sans-serif;">User Id:</label>
+                <input type="text" formControlName="username" />
+                <br /><br />
+                <label style="margin-left: 25px; font-family: sans-serif;">Password:</label>
+                <input type="password" formControlName="password" required />
+                <br /><br />
+                <button type="submit" >Login</button>
+            </form>
+            <p class="bottom-text">Don't have an account? <a href="register">Sign up</a></p><br>
+            <a href="adminlogin" class="admin">Admin Login</a>
+        </div>
+        <div class="image-container">
+            <!-- Add your image here -->
+            <img src="https://bd-bus.com/wp-content/uploads/2021/07/Jamalpur-To-Saidpur-To-Jamalpur-Bus-Ticket-Price-Bus-Schedule.jpg" alt="Image" />
+        </div>
+    </div>
+</div>
+<footer class="footer-card">
+    <div class="footer-card-content">
+      <div class="footer-columns">
+        <div class="column">
+          <span class="L1">BookBus</span>
+          <nav class="footer-nav">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/login">Services</a></li>
+              <li><a href="/contactus">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="column">
+          <h4 style="font-family: sans-serif;">Useful Links</h4>
+          <ul>
+            <li><a href="/terms">Terms&Service</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/privacy">Cancel Policy</a></li>
+            <li><a href="/privacy">Cancel Policy</a></li>
+            <li><a href="/faqs">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4 style="font-family: sans-serif;">Additional Links</h4>
+          <ul>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/support">Support</a></li>
+            <li><a href="/support">Bus Routes</a></li>
+            <li><a href="/support">Refer Friends</a></li>
+            <li><a href="/support">Choose Us</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Follow Us</h4>
+          <ul class="social-icons">
+            <li>
+              <a href="#"
+                ><img
+                  src="https://freelogopng.com/images/all_img/1658030214facebook-logo-hd.png"
+                  alt="Facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://freelogopng.com/images/all_img/1658586823instagram-logo-transparent.png"
+                  alt="Twitter"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-mobile-software-icon-png-image_6315991.png"
+                  alt="Facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png"
+                  alt="Twitter"
+              /></a>
+            </li>
+          </ul>
+          <img
+            src="https://meshpayments.com/wp-content/uploads/2022/06/Banner-2.png"
+            alt="Facebook"
+            width="280px"
+            height="120px"
+            style="margin-left: 100px"
+          />
+        </div>
+      </div>
+    </div>
+  </footer>
+  

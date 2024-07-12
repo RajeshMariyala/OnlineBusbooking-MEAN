@@ -1,0 +1,271 @@
+.searchbox {
+    display: flex;
+    width: 1000px; 
+    margin: 0 auto 50px; 
+    padding: 20px; 
+    border: 1px solid #ffffff; 
+    border-radius: 5px; 
+    box-shadow: 4px 4px 8px 8px rgba(183, 180, 180, 0.1);
+    transition: box-shadow 0.3s ease-in-out; 
+    margin-top:60px ;
+    background-color: #ffffff;
+  }
+  
+  .searchbox input {
+    flex: 1; 
+    padding: 10px;
+    border: 2px solid rgb(4, 4, 112); 
+    border-radius: 5px; 
+    margin-right: 10px; 
+  }
+  
+  .searchbox input:last-child {
+    margin-right: 0;
+  }
+  
+  
+  
+  .bus-card {
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 900px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: 20px;
+    margin: 10px;
+   text-align: left;
+   background-color: #ffffff;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+   height: 100px;
+   justify-content: space-between;
+   margin-left: 30px;
+   color: #170869
+  }
+
+  p{
+  font-size: 20px;
+  }
+  .btn-success{
+    color: white;
+    background-color: rgb(5, 5, 113);
+  }
+  
+  .one{
+    width: 280px;
+    margin-left: 10px;
+    margin-top: -50px;
+  
+  }
+  
+  .two{
+    width: 160px;
+    margin-top: -35px;
+   
+    
+  }
+  
+  .three{
+    width: 10px;
+   
+    margin-left: -40px;
+  }
+
+.flex {
+    display: flex;
+}
+
+.filters {
+    width: 30%;
+    margin-right: 20px;
+}
+
+.filters h2 {
+    margin-bottom: 12px;
+}
+
+.filters label {
+    display: block;
+    margin-left: 25px;
+}
+
+.bus-cards {
+    width: 70%;
+}
+
+.bus-card {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.bus-card .one,
+.bus-card .two,
+.bus-card .three {
+    padding: 10px;
+}
+
+.bus-card .two {
+    flex: 1;
+}
+
+.bus-card .three {
+    flex: 1;
+    text-align: right;
+}
+
+.ticketbtn {
+    background-color: #4828a7;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.filters {
+    width: 200px;
+    margin: 0  0px; 
+    padding: 10px; 
+    border: 1px solid #ffffff; 
+    border-radius: 9px; 
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); 
+    transition: box-shadow 0.3s ease-in-out; 
+    margin-left: 100px;
+    height: 300px;
+    background-color: #ffffff;
+    color: #170869
+    
+    
+  }
+  input.check {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 30px;
+    align-items: left;
+    align-content: left;
+  }
+  
+  
+  .filters:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  }
+
+
+  /* footer */
+
+.footer-card {
+  background-color: #130571;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-card-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.column {
+  flex: 1;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.L1 {
+  display: inline-block;
+  vertical-align: middle;
+  color: white;
+  border: 2px solid white;
+  padding: 4px 4px 4px 4px;
+
+  border-radius: 4px;
+  font-family: sans-serif;
+  font-size: 30px;
+}
+
+.footer-nav ul,
+.social-icons {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav a,
+.social-icons a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  display: flex;
+}
+
+.column h4 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  margin-left: 70px;
+}
+
+.column ul {
+  padding-left: 80px;
+}
+
+.column ul li {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+.column ul li a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  font-family: sans-serif;
+}
+
+.footer-nav ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-nav ul li {
+  font-size: 25px;
+  margin-bottom: 0px;
+  margin-top: 25%;
+  font-family: sans-serif;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .footer-columns {
+      flex-direction: column;
+  }
+
+  .column {
+      margin-bottom: 20px;
+  }
+}

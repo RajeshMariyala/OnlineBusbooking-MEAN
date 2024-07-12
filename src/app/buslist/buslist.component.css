@@ -1,0 +1,196 @@
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 30px;
+    /* margin-left: 10px; */
+   
+    
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 4px 4px 6px 6px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    padding: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px;
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+  
+  .table th {
+    background-color:#1f0780;
+    color: #fff;
+    font-family: sans-serif;
+  }
+  
+  .table tbody tr:hover {
+    background-color:#e1e0e5;
+    color: rgb(32, 7, 90);
+    font-weight: 600px;
+  }
+  .table th:nth-child(4) {
+    font-size: 14px; /* Adjust font size as needed */
+    padding: 8px; /* Adjust padding as needed */
+  }
+  .box {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    padding: 20px;
+  }
+  
+  .box input[type="number"],
+  .box input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-left: 15px;
+  }
+  
+  .box button {
+    padding: 10px 20px;
+    background-color: #1f0780;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  
+  .box button:hover {
+    background-color:white;
+    border: 3px solid #1f0780;
+    color: #1f0780;
+  }
+  .edit-btn,
+.delete-btn {
+    padding: 8px 20px; /* Adjust padding as needed */
+    background-color: #ff0000; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Apply button border radius */
+    cursor: pointer;
+    /* margin-right: 10px; */
+    margin: 0 5px;
+    transition: background-color 0.3s; 
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 600px;
+}
+.edit-btn{
+    background-color: rgb(28, 186, 28);
+    color: white;
+}
+
+
+.admin-navigation-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px; /* Set the width according to your design */
+  height: 100%;
+  background-color: #280465; /* Change the background color as needed */
+  color: #fff; /* Change the text color as needed */
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.logo-text{
+  font-family: sans-serif;
+  
+}
+.logotext >i{
+  background-color: rgb(255, 255, 255);
+  padding: 3px 5px 3px 5px;
+  border-radius: 3px;
+  margin-left: 3px;
+  color: #1f0780;
+}
+.navigation-items{
+  font-family: sans-serif;
+  font-size: 20px;
+  margin-left: 20px;
+
+  
+ 
+}
+.admin-navigation-header .navigation-items a {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  
+  
+}
+.admin-navigation-header .navigation-items a:hover {
+  background-color: white;
+  color: #1f0780;
+  border-radius: 6px;
+  padding-left: 15px;
+  padding-top: 5px;
+}
+.admin-navigation-header nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-navigation-header .logo-container {
+  margin-bottom: 20px;
+}
+
+.admin-navigation-header .navigation-items a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.admin-navigation-header .hamburger {
+  display: none; /* Hide the hamburger menu for now */
+}
+
+/* Media query for small screens to toggle navigation */
+@media screen and (max-width: 768px) {
+  .admin-navigation-header {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+  }
+
+  .admin-navigation-header .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+
+  .admin-navigation-header .navigation-items {
+      display: none;
+  }
+
+  .admin-navigation-header .navigation-items.active {
+      display: block;
+  }
+}
+
+
+.topcard2 {
+  width: 1550px;
+  height: 50px;
+  padding: 20px;
+  background-color:#280465;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  /* border-radius: 8px; */
+  margin-top: -80px;
+  margin-left: -78px;
+  margin-right: -70px;
+}

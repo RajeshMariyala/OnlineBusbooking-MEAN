@@ -1,0 +1,118 @@
+<div class="searchbox">
+  <input type="text" name="startPoint" placeholder="Start Point" (input)="handleFilterChange('startPoint',$event)" />
+  <input type="text" name="endPoint" placeholder="End Point" (input)="handleFilterChange('endPoint',$event)" />
+  <input type="date" name="date" (input)="handleFilterChange('date',$event)" />
+  <input type="button" class="btn-success" name="search" value="Buses Below!!" (click)="search()" />
+</div>
+
+<div class="flex">
+  <div class="filters">
+    <h2 style="margin-bottom: 12px; font-family: sans-serif;margin-left: 30px;">Filters</h2>
+    <label>
+      <input type="checkbox" name="ac" (change)="handleFilterChange('ac', $event)" />&nbsp; AC
+    </label><br />
+    <label>
+      <input type="checkbox" name="nonAC" (change)="handleFilterChange('nonAC', $event)" />&nbsp; Non-AC
+    </label><br />
+    <label>
+      <input type="checkbox" name="sleeper" (change)="handleFilterChange('sleeper', $event)" />&nbsp; Sleeper
+    </label><br />
+    <label>
+      <input type="checkbox" name="luxury" (change)="handleFilterChange('luxury', $event)" />&nbsp;&nbsp; Luxury
+    </label><br />
+    <label>
+      <input type="checkbox" name="superLuxury" (change)="handleFilterChange('superLuxury', $event)" />&nbsp; Super
+      Luxury
+    </label><br />
+  </div>
+
+  <div>
+    <div class="bus-cards">
+      <div *ngIf="filteredBuses.length === 0">
+        <h2>No buses available!! we will update soon...</h2>
+      </div>
+      <div *ngFor="let bus of filteredBuses" class="bus-card">
+        <div class="one">
+          <br />
+          <h3>{{ bus.name }}</h3>
+          <p>Type: {{ bus.type }}</p>
+          <p *ngIf="bus.ac">(AC)</p>
+          <p *ngIf="bus.sleeper">Sleeper</p>
+        </div>
+        <div class="two">
+          <p>From: {{ bus.from }} <img src="https://cdn-icons-png.flaticon.com/128/724/724802.png" alt="" width="40px"
+              height="40px" /> To: {{ bus.to }}</p>
+
+          <p>Start: {{ bus.Start }} | End: {{ bus.End }}</p>
+        </div>
+        <div class="three">
+          <p class="p">Price: {{ bus.Price }}</p>
+          <input type="button" class="ticketbtn" (click)="bookSeat()" value="Book Seat" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer-card">
+  <div class="footer-card-content">
+    <div class="footer-columns">
+      <div class="column">
+        <span class="L1">BookBus</span>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/login">Services</a></li>
+            <li><a href="/contactus">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="column">
+        <h4 style="font-family: sans-serif;">Useful Links</h4>
+        <ul>
+          <li><a href="/terms">Terms&Service</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/privacy">Cancel Policy</a></li>
+          <li><a href="/privacy">Cancel Policy</a></li>
+          <li><a href="/faqs">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4 style="font-family: sans-serif;">Additional Links</h4>
+        <ul>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/support">Support</a></li>
+          <li><a href="/support">Bus Routes</a></li>
+          <li><a href="/support">Refer Friends</a></li>
+          <li><a href="/support">Choose Us</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>Follow Us</h4>
+        <ul class="social-icons">
+          <li>
+            <a href="#"><img src="https://freelogopng.com/images/all_img/1658030214facebook-logo-hd.png"
+                alt="Facebook" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="https://freelogopng.com/images/all_img/1658586823instagram-logo-transparent.png"
+                alt="Twitter" /></a>
+          </li>
+          <li>
+            <a href="#"><img
+                src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-mobile-software-icon-png-image_6315991.png"
+                alt="Facebook" /></a>
+          </li>
+          <li>
+            <a href="#"><img
+                src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png"
+                alt="Twitter" /></a>
+          </li>
+        </ul>
+        <img src="https://meshpayments.com/wp-content/uploads/2022/06/Banner-2.png" alt="Facebook" width="280px"
+          height="120px" style="margin-left: 100px" />
+      </div>
+    </div>
+  </div>
+</footer>

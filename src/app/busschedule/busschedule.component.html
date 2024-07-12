@@ -1,0 +1,86 @@
+<div class="topcard"><img src="https://www.colorhexa.com/300465.png" alt="" height="70px" width="1510px" style="margin-left: -0px;margin-top: -110px;"></div>
+ 
+<div class="container">
+    <h3 style="font-family: sans-serif; text-align: center;">Bus Scheduling</h3>
+    <button class="add-bus-btn" (click)="toggleForm()">Add Bus</button>
+  
+    <table class="table table-dark table-hover table">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Type</th>
+          <th>Start</th>
+          <th>End</th>
+          <th>Price</th>
+          <th>Delete</th>
+          <th>Select</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bus of busSchedulingArray">
+          <td>{{ bus.sno }}</td>
+          <td>{{ bus.name }}</td>
+          <td>{{ bus.from }}</td>
+          <td>{{ bus.to }}</td>
+          <td>{{ bus.type }}</td>
+          <td>{{ bus.Start }}</td>
+          <td>{{ bus.End }}</td>
+          <td>{{ bus.Price }}</td>
+         <td>
+            <a href="javascript:void(0);" (click)="deleteData(bus.sno)">
+              <img src="https://cdn-icons-png.flaticon.com/512/6861/6861362.png" width="25px" height="25px" style="margin-left: 5px;" />
+            </a>
+          </td>
+         
+          <td>
+            <a href="javascript:void(0);" (click)="selectRow(bus)">
+              <img src="https://cdn-icons-png.flaticon.com/512/1536/1536384.png" width="25px" height="25px" style="margin-left: 6px; padding: 4px;" />
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="form" *ngIf="showForm" [formGroup]="scheduleForm">
+        <input type="text" placeholder="sno" formControlName="sno" /><br /><br />
+        <input type="text" placeholder="Name" formControlName="name" /><br /><br />
+        <input type="text" placeholder="From" formControlName="from" /><br /><br />
+        <input type="text" placeholder="To" formControlName="to" /><br /><br />
+        <input type="text" placeholder="Type" formControlName="type" /><br /><br />
+        <input type="text" placeholder="Start" formControlName="Start" /><br /><br />
+        <input type="text" placeholder="End" formControlName="End" /><br /><br />
+        <input type="number" placeholder="Price" formControlName="Price" /><br /><br />
+        <input type="button" class="btn btn-primary" (click)="updateData()" value="Update Data" /><br>
+        <button class="btn btn-success" (click)="addData()">Add Data</button> 
+      </div>
+  </div>
+
+
+  <!-- admin nav -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <header class="admin-navigation-header">
+      <nav>
+          <div class="logo-container">
+              <h2 class="logotext" style="margin-left: 20px; font-size: 30px;box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+          ">BookBus &nbsp;<i class="fas fa-bus-alt"></i></h2>
+          </div>
+          <div class="navigation-items" id="navigation-items">
+              <a routerLink="/dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+              <a routerLink="/buslist"><i class="fas fa-bus-alt"></i> Buslist</a>
+              <a routerLink="/busschedule"><i class="fas fa-route"></i> Busschedule</a>
+              <a routerLink="/userlist"><i class="fas fa-users"></i> Userlist</a>
+              <a routerLink="/schedule"><i class="fas fa-calendar-alt"></i> Schedule</a>
+              <br><br><br>
+            <a routerLink="/login"><i class="fas fa-sign-in-alt"></i> Log Out</a>
+          </div>
+          <div class="hamburger">
+              <span id="openHam">&#9776;</span>
+              <span id="closeHam">&#x2716;</span>
+          </div>
+      </nav>
+  </header>
+  
+  

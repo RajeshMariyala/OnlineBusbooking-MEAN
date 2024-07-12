@@ -1,0 +1,360 @@
+.container {
+    position: relative;
+    width: 120%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.banner img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.card {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -170px;
+    flex-direction: column;
+    height: 90px;
+    font-family: sans-serif;
+}
+.card h2{
+    font-family: sans-serif;
+}
+.card form {
+    display: flex;
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.input-group label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.input-group input[type="text"],
+.input-group input[type="date"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: sans-serif;
+}
+
+.icon {
+    background-color: #f0f0f0;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.icon i {
+    color: #777;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1f0780;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+ /* images cards css part*/
+ .offers{
+    margin-left: 25px;
+ } 
+ .animated-image {
+    height: 250px;
+    width: 340px;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .animated-image:hover {
+    transform: translateY(-5px);
+  }
+
+  /* tetx cards */
+  
+  .textcard {
+    width: 1300px;
+    border: 1px solid #aba6a6;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    background-color:#e8e3e38f;
+    margin-left:70px ;
+    
+    
+  }
+  
+  .textcard h6 {
+    font-size: 18px;
+    color: #333;
+    text-align: left;
+    margin-top: -10px;
+    font-family: sans-serif;
+  }
+  
+  .textcard p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    padding-left: 0px;
+    text-align: left; 
+    margin-top: -5px;
+    font-family: sans-serif;
+  }
+  
+  .textcard ul {
+    margin: 10px 0;
+    padding-left: 0;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Two columns */
+    gap: 5px; /* Gap between items */
+  }
+
+  .textcard li {
+    font-size: 15px;
+    padding: 5px;
+    text-align: left;
+    margin-left: 5%;
+    font-family: sans-serif;
+  }
+
+  /* offers below cards */
+  .choose-us{
+    margin-left: 45px;
+  }
+
+  .small-card {
+    display: inline-block; 
+    vertical-align: top; 
+    width: 300px;
+    border: 1px solid #fffdfd;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-top: 1%;
+    
+  }
+  
+  .small-card-image {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+  }
+  
+  .small-card-content {
+    display: inline-block; 
+    vertical-align: top;
+    width: calc(100% - 55px); 
+  }
+  
+  .small-card-heading {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    text-align: left;
+  }
+  
+  .small-card-description {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0;
+    text-align: left;
+  }
+  
+  .small-card:hover{
+    transform: translateX(-5px);
+  }
+  /*small cards bus operators*/
+  .rtc{
+    margin-left: 49px;
+  }
+  .small-card2 {
+    display: inline-block;
+    vertical-align: top; 
+    width: 180px;
+    border: 1px solid #fffdfd;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-top: 1%;
+    overflow: hidden; 
+}
+
+.small-card2-image {
+    width: 100px;
+    height: 90px;
+    margin-right: 10px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.small-card2-content {
+    text-align: center; 
+}
+
+.small-card2-heading {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    text-align: center;
+}
+
+.small-card2-description {
+    color: #666;
+    text-align: center; 
+    font-family: sans-serif;
+    overflow: hidden; 
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; 
+    font-size: 12px;
+}
+
+.small-card2:hover{
+  transform: translateY(-5px);
+}
+
+/* footer */
+
+.footer-card {
+  background-color: #130571;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-card-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.column {
+  flex: 1;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.L1 {
+  display: inline-block;
+  vertical-align: middle;
+  color: white;
+  border: 2px solid white;
+  padding: 4px 4px 4px 4px;
+
+  border-radius: 4px;
+  font-family: sans-serif;
+  font-size: 30px;
+}
+
+.footer-nav ul,
+.social-icons {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav a,
+.social-icons a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  display: flex;
+}
+
+.column h4 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  margin-left: 70px;
+}
+
+.column ul {
+  padding-left: 80px;
+}
+
+.column ul li {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+.column ul li a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  font-family: sans-serif;
+}
+
+.footer-nav ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-nav ul li {
+  font-size: 25px;
+  margin-bottom: 0px;
+  margin-top: 25%;
+  font-family: sans-serif;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .footer-columns {
+      flex-direction: column;
+  }
+
+  .column {
+      margin-bottom: 20px;
+  }
+}

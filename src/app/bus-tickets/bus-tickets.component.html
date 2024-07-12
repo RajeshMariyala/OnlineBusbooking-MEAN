@@ -1,0 +1,99 @@
+<div>
+    <nav class="buttons">
+     
+          <button (click)="currentPage = 'history'" [class.active]="currentPage === 'history'">
+            History of Tickets
+          </button>
+       
+          <button (click)="currentPage = 'reschedule'" [class.active]="currentPage === 'reschedule'">
+            Reschedule of Tickets
+          </button>
+       
+          <button (click)="currentPage = 'cancel'" [class.active]="currentPage === 'cancel'">
+            Cancel Ticket
+          </button>
+        
+    </nav>
+  
+    <div *ngIf="currentPage === 'history'">
+      <div class="history-of-tickets-card">
+        <h2 style="font-size: 30px;">History of Tickets</h2>
+        <div class="history-of-tickets-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Ticket Number</th>
+                <th>Place</th>
+                <th>Booking Status</th>
+                <th>Download</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of historyArray">
+                <td>{{ item.Name }}</td>
+                <td>{{ item.Refno }}</td>
+                <td>{{ item.Qty }}</td>
+                <td>{{ item.Status }}</td>
+                <td>
+                  <button (click)="handleDownloadPDF()">Download Tickets</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="currentPage === 'reschedule'">
+     
+      <div class="history-of-tickets-card">
+        <h2 style="font-size: 30px;"> Reschedule of Tickets</h2>
+        <div class="history-of-tickets-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Ticket Number</th>
+                <th>No of Seats</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of historyArray">
+                <td>{{ item.Name }}</td>
+                <td>{{ item.Refno }}</td>
+                <td>{{ item.Qty }}</td>
+                <td>{{ item.Date }}</td>
+                
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="currentPage === 'cancel'">
+      <div>
+        
+        <div class="cancel-card">
+          <div class="text-container">
+            <h2 class="cancel">Cancel Ticket</h2>
+          </div>
+          <fieldset style="border-radius: 10px;">
+            <form class="search-form" (submit)="handleSubmit($event)">
+              <span style="font-size: 20px; font-family: sans-serif;margin-top: 10px;">Bus Booking ID</span> &nbsp;
+              <input id="bookingid" class="search-input" type="text" placeholder="Enter Id Here" />
+              <span style="font-size: 20px; font-family: sans-serif; margin-top: 10px;">Mobile No</span> &nbsp;
+              <input id="mobileNumber" class="search-input" type="text" placeholder="Enter Mobile No" />
+              <button class="cancel-button0" type="submit">Cancel Ticket</button>
+            </form>
+          </fieldset>
+          <div class="text-container2">
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

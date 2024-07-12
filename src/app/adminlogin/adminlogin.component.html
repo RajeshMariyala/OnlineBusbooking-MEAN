@@ -1,0 +1,20 @@
+
+
+<div class="card">
+    <div class="container">
+        <div class="form-container">
+            <p class="signup">Login</p>
+            <form [formGroup]="adminloginForm" (ngSubmit)="login()">
+                <label style="margin-left: 25px;font-family: sans-serif;">User Id:</label>
+                <input type="text" formControlName="username" required />
+                <br /><br />
+                <label style="margin-left: 25px; font-family: sans-serif;">Password:</label>
+                <input type="password" formControlName="password" required />
+                <br /><br />
+                <button type="submit" >Login</button>
+            </form>
+           
+        </div>
+       
+    </div>
+</div>

@@ -1,0 +1,66 @@
+<!-- <div style="background-image: url('images/des.webp'); width: 1475px; height: 670px; background-size: cover; background-repeat: no-repeat;"> -->
+  <div class="topcard4"><img src="https://www.colorhexa.com/300465.png" alt="" height="50px" width="1550px" style="margin-left: -50px;margin-top: -0px;"></div>
+
+  <div class="container">  
+  <h3 style="text-align: center;font-family: sans-serif;">User List</h3>
+  
+    <table class="table table-dark table-hover table" style="margin-left: 50px;">
+      <thead>
+        <tr>
+          <th>Refno</th>
+          <th>Name</th>
+          <th>Qty</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of userArray">
+          <td>{{ item.Refno }}</td>
+          <td>{{ item.Name }}</td>
+          <td>{{ item.Qty }}</td>
+          <td>{{ item.Amount }}</td>
+          <td>{{ item.Status }}</td>
+          <td>
+            <button class="btn btn-success" (click)="editClick(item)">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div *ngIf="isEditing" class="box">
+      <form [formGroup]="userForm" (ngSubmit)="addDataButtonClick()">
+        <input type="number" placeholder="Number" formControlName="Refno" />
+        <input type="number" placeholder="Amount" formControlName="Amount" />
+        <input type="text" placeholder="Name" formControlName="Name" />
+        <input type="text" placeholder="Status" formControlName="Status" />
+        <button class="btn btn-success" type="submit">{{ isEditing ? 'Update Data' : 'Add Data' }}</button>
+      </form>
+    </div>
+  </div>
+  <!-- </div> -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <header class="admin-navigation-header">
+      <nav>
+          <div class="logo-container">
+              <h2 class="logotext" style="margin-left: 20px; font-size: 30px;box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+          ">BookBus &nbsp;<i class="fas fa-bus-alt"></i></h2>
+          </div>
+          <div class="navigation-items" id="navigation-items">
+              <a routerLink="/dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+              <a routerLink="/buslist"><i class="fas fa-bus-alt"></i> Buslist</a>
+              <a routerLink="/busschedule"><i class="fas fa-route"></i> Busschedule</a>
+              <a routerLink="/userlist"><i class="fas fa-users"></i> Userlist</a>
+              <a routerLink="/schedule"><i class="fas fa-calendar-alt"></i> Schedule</a>
+              <br><br><br>
+            <a routerLink="/login"><i class="fas fa-sign-in-alt"></i> Log Out</a>
+          </div>
+          <div class="hamburger">
+              <span id="openHam">&#9776;</span>
+              <span id="closeHam">&#x2716;</span>
+          </div>
+      </nav>
+  </header>
+  

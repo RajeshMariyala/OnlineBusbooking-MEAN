@@ -1,0 +1,122 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Specify fallback font family */
+}
+
+
+
+.main {
+    padding: 20px;
+}
+
+.center-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.background-image {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-image: url('hRrKXVfuIKW0fhqsUMvC.gif');
+    background-size: cover;
+    background-position: center;
+    color: #2a28a1;
+}
+
+.contact-us {
+    font-size: 28px;
+    font-weight: bold;
+    text-align:center;
+    text-shadow: 2px 2px 4px rgba(66, 57, 238, 0.5);
+    font-family: sans-serif; /* Specify sans-serif font family */
+}
+
+.form-container {
+    width: 70%;
+    padding: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    width:95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #949090e0;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #43178a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+
+button:hover {
+    background-color: #555;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 0; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100px; 
+}
+
+.locations {
+    margin-right: 20px;
+}
+
+.locations ul {
+    list-style: none;
+    padding: 0;
+}
+
+.locations ul li {
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+/* Card Styles */
+.card {
+    background-color: #aaa6e4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px; 
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
